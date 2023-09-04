@@ -57,7 +57,7 @@ jobs:
           mkdir content/jp/docs
           mkdir content/en
           mkdir content/en/docs
-          cp ttt/README.md content/jp/_index.md
+          cat ttt/README.md |  sed '5d' > content/jp/_index.md
           cp ttt/README_EN.md content/en/_index.md
           cp -r ttt/Manual/JP/* content/jp/docs
           cp -r ttt/Manual/EN/* content/en/docs
