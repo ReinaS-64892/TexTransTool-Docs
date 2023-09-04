@@ -68,6 +68,7 @@ jobs:
           for f in `find . -name *.md`; do
           cat $f | sed 's_(Manual_(docs_g' | sed 's_\.md)_)_g' | sed 's_\](.*)_\L&_g' > $f.tmp
           mv $f.tmp $f
+          done
 
 
       - name: Setup Pages
