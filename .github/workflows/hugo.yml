@@ -59,6 +59,7 @@ jobs:
           cp ttt/README_EN.md content/en/_index.md
           cp -r ttt/Manual/JP/* content/jp
           cp -r ttt/Manual/EN/* content/en
+          find content -name "*.meta" | xargs rm
       
       - name: Setup Pages
         id: pages
