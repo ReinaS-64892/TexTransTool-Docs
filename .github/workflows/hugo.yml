@@ -57,6 +57,8 @@ jobs:
           mkdir content/en
           cp ttt/README.md content/jp/_index.md
           cp ttt/README_EN.md content/en/_index.md
+          cp ttt/Manual/JP/* content/jp
+          cp ttt/Manual/EN/* content/en
       
       - name: Setup Pages
         id: pages
