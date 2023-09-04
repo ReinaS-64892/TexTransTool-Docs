@@ -65,9 +65,9 @@ jobs:
 
       - name: Fix MD link # Thanks yanorei32
         run : |
+          wget https://github.com/ReinaS-64892/md_link_fix/releases/download/v0.0.0/md_link_fix
           for f in `find . -name *.md`; do
-          cat $f | sed 's_(Manual_(docs_g' | sed 's_\.md)_)_g' | sed 's_\](.*)_\L&_g' > $f.tmp
-          mv $f.tmp $f
+          ./md_link_fix $f
           done
 
 
