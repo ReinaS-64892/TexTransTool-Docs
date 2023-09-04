@@ -1,0 +1,19 @@
+baseURL = 'https://textranstool.rs64.net/docs'
+languageCode = 'ja-jp'
+title = 'TexTransTool Docs'
+
+theme = 'hugo-book'
+
+
+[languages]
+[languages.jp]
+  languageName = 'Japanese'
+  languageCode = 'ja-jp'
+  contentDir = 'content/jp'
+  weight = 1
+
+[languages.en]
+  languageName = 'English'
+  languageCode = 'en-US'
+  contentDir = 'content/en'
+  weight = 2
