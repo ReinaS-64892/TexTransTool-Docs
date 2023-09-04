@@ -65,7 +65,7 @@ jobs:
 
       - name: Fix MD link # Thanks yanorei32
         run : |
-          wget https://github.com/ReinaS-64892/md_link_fix/releases/download/v0.0.1/md_link_fix
+          wget https://github.com/ReinaS-64892/md_link_fix/releases/download/v0.1.0/md_link_fix
           chmod 777 ./md_link_fix
           for f in `find ./content -name *.md`; do
           ./md_link_fix $f
