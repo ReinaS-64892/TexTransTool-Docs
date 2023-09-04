@@ -62,7 +62,14 @@ jobs:
           cp -r ttt/Manual/JP/* content/jp/docs
           cp -r ttt/Manual/EN/* content/en/docs
           find content -name "*.meta" | xargs rm
-      
+
+      - name: Fix MD link # Thanks yanorei32
+        run : |
+          for f in `find . -name *.md`; do
+          cat $f | sed 's_(Manual_(docs_g' | sed 's_\.md)_)_g' | sed 's_\](.*)_\L&_g' > $f.tmp
+          mv $f.tmp $f
+
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
