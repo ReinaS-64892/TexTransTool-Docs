@@ -1,0 +1,5 @@
+content
+.hugo_build.lock
+/resources
+/public
+/static/beta
